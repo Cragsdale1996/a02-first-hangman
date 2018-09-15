@@ -2,7 +2,7 @@ defmodule HangmanTest do
   use ExUnit.Case
   doctest Hangman
 
-  test "greets the world" do
-    assert Hangman.hello() == :world
+  test "Dictionary module seccessfully imported" do
+    assert Dictionary.random_word() |> is_binary()
   end
 end
