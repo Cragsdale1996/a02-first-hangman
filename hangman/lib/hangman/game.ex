@@ -3,8 +3,10 @@ defmodule Hangman.Game do
     Hangman game backend.
     """
 
+    alias Hangman.Game.State
+
     def new_game() do
-        :new_game
+        %State{}
     end
 
     def tally(_game) do
