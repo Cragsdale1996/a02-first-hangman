@@ -15,7 +15,7 @@ defmodule Hangman.Game do
             word: Dictionary.random_word()
         }
     end
-
+    
     def tally(game = %Game{}) do
         %{ 
             game_state: game.status, 
