@@ -3,15 +3,20 @@ defmodule Hangman.Game do
     Hangman game implementation.
     """
 
-    alias Hangman.Game.State
+    defstruct(
+        turns_left:                  6,
+        status:          :initializing,
+        letters_guessed:     %MapSet{},
+        word:            "LedZeppelin"
+    )
 
     def new_game() do
-        %State{
+        %Game{
             word: Dictionary.random_word()
         }
     end
 
-    def tally(game = %State{}) do
+    def tally(game = %Game{}) do
         %{ 
             game_state: game.status, 
             turns_left: game.turns_left, 
