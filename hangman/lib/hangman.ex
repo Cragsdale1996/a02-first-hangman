@@ -1,6 +1,7 @@
 defmodule Hangman do
   @moduledoc """
-  Hangman game API.
+  Hangman game API. Implementation is built out in
+  Hangman.Game
   """
 
   alias Hangman.Game
