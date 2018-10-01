@@ -14,6 +14,12 @@ defmodule Hangman do
   defdelegate new_game(),             to: Game
 
   @doc """
+  Creates a default game state for Hangman using the word passed in. This state 
+  will be transformed based on it's attributes and guesses made by the player.
+  """
+  defdelegate new_game(word),         to: Game
+
+  @doc """
   Creates a tally for the game, derived from the game's state. It is the foundation 
   of the game's interface to the player. It provides additional useful information, 
   and restricts unnecessary information (doesn't contain the word).
